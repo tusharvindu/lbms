@@ -166,6 +166,11 @@ app_license = "mit"
 # 	],
 # }
 
+scheduler_events = {
+	"daily": [
+		"lbms.library_scheduler.mark_overdue_books"
+	]
+}
 # Testing
 # -------
 
