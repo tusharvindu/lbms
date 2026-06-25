@@ -1,33 +1,119 @@
-### Library Management System
+# Library Management System (LBMS)
 
-Library Management System with Accounting Integration for ERPNext
+A custom Library Management System built on ERPNext/Frappe Framework with integrated fine management and accounting features.
 
-### Installation
+## Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+### Library Settings
+
+* Configurable Loan Period
+* Configurable Fine Per Day
+* Fine Receivable Account Configuration
+* Fine Income Account Configuration
+
+### Books Management
+
+* Book Registry
+* Book Title
+* ISBN
+* Author
+* Category
+* Rack Location
+* Total Copies
+* Available Copies
+* Availability Status
+* Automatic Stock Tracking
+
+### Member Management
+
+* Member Registration
+* Member Type (Student / Staff / Public)
+* Membership Start Date
+* Membership End Date
+* Outstanding Fine Tracking
+
+### Book Issue & Return
+
+* Book Issue Management
+* Automatic Due Date Calculation
+* Membership Validation
+* Book Availability Validation
+* Book Return Processing
+* Automatic Available Copy Updates
+
+### Overdue Management
+
+* Automatic Overdue Detection
+* Daily Scheduler for Overdue Books
+* Status Tracking (Issued / Returned / Overdue)
+
+### Fine Management
+
+* Automatic Fine Calculation
+* Overdue Day Calculation
+* Fine Records
+* Waiver Management
+* Partial Payment Support
+* Outstanding Amount Calculation
+* Payment Status Tracking
+
+  * Unpaid
+  * Partially Paid
+  * Paid
+
+### Accounting Integration
+
+* Automatic Journal Entry Creation
+* Fine Receivable Tracking
+* Fine Income Tracking
+* ERPNext Accounting Integration
+
+## Technology Stack
+
+* Frappe Framework v15
+* ERPNext v15
+* Python
+* MariaDB
+* JavaScript
+
+## Installation
 
 ```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app lbms
+bench get-app <repository-url>
+bench --site <site-name> install-app lbms
+bench --site <site-name> migrate
 ```
 
-### Contributing
+## Scheduler
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+The application includes a daily scheduler that automatically marks overdue book issues.
 
-```bash
-cd apps/lbms
-pre-commit install
-```
+## Module Structure
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+* Library Settings
+* Books
+* Library Member
+* Book Issue
+* Library Fine
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+## Business Flow
 
-### License
+### Book Issue
 
-mit
+Book → Issue → Due Date Generated → Status = Issued
+
+### Book Return
+
+Book Return → Fine Calculation → Fine Record Creation
+
+### Fine Collection
+
+Fine → Payment Entry → Journal Entry Creation → Outstanding Balance Updated
+
+## Author
+
+Tushar
+
+## License
+
+MIT
