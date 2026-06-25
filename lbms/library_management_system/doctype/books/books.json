@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+"autoname": "field:book_title",
+ "creation": "2026-06-25 21:21:53.665966",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "book_details_section",
+  "book_title",
+  "isbn",
+  "author",
+  "category",
+  "column_break_1",
+  "rack_location",
+  "total_copies",
+  "available_copies",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "book_details_section",
+   "fieldtype": "Section Break",
+   "label": "Book Details"
+  },
+  {
+   "fieldname": "book_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Book Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ISBN"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nFiction\nScience\nReference\nHistory\nBiography\nTechnology\nOther"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rack_location",
+   "fieldtype": "Data",
+   "label": "Rack Location"
+  },
+  {
+   "default": "1",
+   "fieldname": "total_copies",
+   "fieldtype": "Int",
+   "label": "Total Copies",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "available_copies",
+   "fieldtype": "Int",
+   "label": "Available Copies"
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nAvailable\nOut of Stock"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-25 22:19:20.251504",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Books",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

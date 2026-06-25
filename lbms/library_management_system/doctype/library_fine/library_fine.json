@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-25 21:24:11.207050",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fine_details_section",
+  "member",
+  "book_issue",
+  "fine_amount",
+  "fine_days",
+  "payment_status",
+  "waived_amount",
+  "paid_amount",
+  "outstanding_amount",
+  "journal_entry",
+  "payment_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "fine_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fine Details"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Library Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "book_issue",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Book Issue",
+   "options": "Book Issue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fine_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fine Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fine_days",
+   "fieldtype": "Int",
+   "label": "Overdue Days",
+   "read_only": 1
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Status",
+   "options": "\nUnpaid\nPartially Paid\nPaid\nWaived"
+  },
+  {
+   "default": "0",
+   "fieldname": "waived_amount",
+   "fieldtype": "Currency",
+   "label": "Waived Amount"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Library Fine",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-06-25 23:37:44.376978",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Library Fine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

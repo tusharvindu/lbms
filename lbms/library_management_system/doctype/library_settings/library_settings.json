@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-25 21:04:36.523695",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "library_configuration_section",
+  "loan_period_days",
+  "fine_per_day",
+  "accounting_section",
+  "fine_receivable_account",
+  "fine_income_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "library_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Library Configuration"
+  },
+  {
+   "default": "14",
+   "fieldname": "loan_period_days",
+   "fieldtype": "Int",
+   "label": "Loan Period Days",
+   "reqd": 1
+  },
+  {
+   "default": "10",
+   "fieldname": "fine_per_day",
+   "fieldtype": "Currency",
+   "label": "Fine Per Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accounting_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Configuration"
+  },
+  {
+   "fieldname": "fine_receivable_account",
+   "fieldtype": "Link",
+   "label": "Fine Receivable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "fine_income_account",
+   "fieldtype": "Link",
+   "label": "Fine Income Account",
+   "options": "Account"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-06-25 21:04:36.523695",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Library Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
